@@ -1,0 +1,45 @@
+name: "(niet) Nerd issue (content/design)"
+description: "Content, design, WordPress, of communicatie taak"
+labels: []
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: Wat moet er gebeuren
+      description: "Beschrijf de taak in duidelijke taal."
+      placeholder: "Vervang de sponsorlogo's op de homepage..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: where
+    attributes:
+      label: Waar
+      description: "URLs van pagina's, WordPress admin paden, of screenshots."
+      placeholder: |
+        - https://tjas.nl/sponsors
+        - WordPress: Pagina's > Sponsors > Bewerken
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: "Exacte tekst, afbeelding specificaties, of bij wie je terecht kunt voor content/goedkeuring."
+      placeholder: |
+        - Nieuwe logo's staan in Google Drive: ...
+        - Afmetingen: 200x100px, PNG
+    validations:
+      required: false
+
+  - type: textarea
+    id: done-when
+    attributes:
+      label: Klaar wanneer
+      description: "Checklist van wat 'af' betekent."
+      placeholder: |
+        - [ ] Nieuwe logo's staan op de website
+        - [ ] Oude logo's zijn verwijderd
+    validations:
+      required: true

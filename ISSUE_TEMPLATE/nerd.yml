@@ -1,0 +1,63 @@
+name: "Nerd issue (technisch)"
+description: "Bug, feature, refactor, of tech-debt voor het dev team"
+labels: []
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      options:
+        - feat
+        - fix
+        - chore
+        - refactor
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: "Wat doet dit deel van het systeem en waarom is deze wijziging nodig?"
+      placeholder: "De huidige login flow gebruikt..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: Wat moet er gebeuren
+      description: "Stap-voor-stap beschrijving. Noem specifieke bestanden, routes, of componenten."
+      placeholder: |
+        - Pas `src/auth/login.go` aan om...
+        - Voeg een nieuw endpoint toe in...
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptatiecriteria
+      description: "Concrete, testbare criteria. Gebruik checkboxen."
+      placeholder: |
+        - [ ] Gebruiker kan inloggen met e-mail
+        - [ ] Foutmelding bij ongeldig wachtwoord
+    validations:
+      required: true
+
+  - type: textarea
+    id: hints
+    attributes:
+      label: Implementatie hints
+      description: "Relevante code paths, patronen, gotchas, of externe documentatie."
+      placeholder: "Kijk naar hoe `handlers/members.go` het doet..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Buiten scope
+      description: "Wat hoort expliciet NIET bij deze issue?"
+    validations:
+      required: false
